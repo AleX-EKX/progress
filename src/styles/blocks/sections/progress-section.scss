@@ -1,0 +1,118 @@
+.progress-section{
+    height: 100vh;
+    &__container{
+        height: 100%;
+        &__block{
+            height: 100%;
+            @include df_ac_jcc;
+            gap: 5rem;
+            
+            @include mobile_small{
+                flex-direction: column
+            }
+            .progress-circle{
+                @include df_ac_jcc;
+                padding: 1.25rem;
+                max-width: 17.75rem;
+                width: 100%;
+                &__value{
+                    stroke-width: 10;
+                    stroke: #007bff;
+                    stroke-linecap: round;
+                    transition: stroke-dashoffset 0.5s ease;
+                }
+            }
+            &__info-block{
+                @include df_fdc;
+                gap: 1rem;
+
+                .detail-block{
+                    @include df_ac;
+                    gap: 2rem;
+                    &__input{
+                        background: white;
+                        border: 0.0625rem solid #000000;
+                        border-radius: 99999px;
+                        padding: 1rem 0;
+                        font-size: 2rem;
+                        text-align: center;
+                        max-width: 7.875rem;
+                        width: 100%;
+                    }
+                    span{
+                        color: black;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bg-circle {
+    stroke-width: 10;
+    stroke: #e5e7eb;
+}
+
+.hidden {
+    display: none;
+}
+
+.animated {
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Ползунок */
+.switch {
+    position: relative;
+    width: 6.75rem;
+    height: 4.125rem;
+    margin-right: 0.625rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: -1.1rem;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 2.125rem;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 3.625rem;
+    width: 3.625rem;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007bff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(4rem);
+}

@@ -1,0 +1,271 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap");
+.mt-8 {
+  margin-top: 8rem;
+}
+
+.mt-6 {
+  margin-top: 6rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+@media (max-width: 1920px) {
+  html {
+    font-size: 0.8333vw;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Wix Madefor Display", sans-serif;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  color: #FAFAFA;
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 2rem;
+  }
+}
+body a {
+  color: #FAFAFA;
+  transition: all 0.3s;
+}
+body a:hover {
+  color: #FAFAFA;
+  opacity: 0.7;
+}
+
+main {
+  max-width: 1921px;
+  margin: 0 auto;
+}
+@media (max-width: 1920px) {
+  main {
+    margin: 0;
+    max-width: none;
+  }
+}
+
+hr {
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  height: 100%;
+}
+
+button,
+textarea {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.oh {
+  overflow: hidden !important;
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none !important;
+  }
+}
+
+.mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+}
+
+.container {
+  margin: 0 3rem;
+}
+@media (max-width: 768px) {
+  .container {
+    margin: 0 1rem;
+  }
+}
+
+.progress-section {
+  height: 100vh;
+}
+.progress-section__container {
+  height: 100%;
+}
+.progress-section__container__block {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+@media (max-width: 568px) {
+  .progress-section__container__block {
+    flex-direction: column;
+  }
+}
+.progress-section__container__block .progress-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  max-width: 17.75rem;
+  width: 100%;
+}
+.progress-section__container__block .progress-circle__value {
+  stroke-width: 10;
+  stroke: #007bff;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+}
+.progress-section__container__block__info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.progress-section__container__block__info-block .detail-block {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.progress-section__container__block__info-block .detail-block__input {
+  background: white;
+  border: 0.0625rem solid #000000;
+  border-radius: 99999px;
+  padding: 1rem 0;
+  font-size: 2rem;
+  text-align: center;
+  max-width: 7.875rem;
+  width: 100%;
+}
+.progress-section__container__block__info-block .detail-block span {
+  color: black;
+  font-weight: bold;
+}
+
+.bg-circle {
+  stroke-width: 10;
+  stroke: #e5e7eb;
+}
+
+.hidden {
+  display: none;
+}
+
+.animated {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Ползунок */
+.switch {
+  position: relative;
+  width: 6.75rem;
+  height: 4.125rem;
+  margin-right: 0.625rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: -1.1rem;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 2.125rem;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 3.625rem;
+  width: 3.625rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(4rem);
+}
+
+/*# sourceMappingURL=main.css.map */

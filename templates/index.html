@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогресс Бар</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+
+</head>
+<body>
+    <main>
+        <section>
+            <div class="progress-section">
+                <div class="progress-section__container container">
+
+                    <div class="progress-section__container__block">
+                        <div class="progress-circle">
+                            <svg width="120" height="120" viewBox="0 0 120 120" class="svg-storke">
+                                <circle class="bg-circle" cx="60" cy="60" r="54" stroke="#e5e7eb" stroke-width="12" fill="none"/>
+                                <circle class="progress-circle__value" cx="60" cy="60" r="54" stroke="#007bff" stroke-width="12" fill="none"
+                                    stroke-dasharray="339.292" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
+                            </svg>
+                        </div>
+
+                        <div class="progress-section__container__block__info-block">
+                            <div class="detail-block">
+                                <input type="number" class="detail-block__input" id="value-input" min="0" max="100" value="60">
+                                <span>Value</span>
+                            </div>
+
+                            <div class="detail-block">
+                                <label class="switch">
+                                    <input type="checkbox" id="animate-checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                                <span>Animate</span>
+                            </div>
+
+                            <div class="detail-block">
+                                <label class="switch">
+                                    <input type="checkbox" id="hide-checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                                <span>Hide</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="../src/scripts/app.js"></script>
+    
+</body>
+</html>
